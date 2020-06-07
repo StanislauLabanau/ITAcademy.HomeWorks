@@ -39,77 +39,94 @@ namespace HW03.Task2
             {
                 return 3.14 * Radius * Radius;
             }
-            //create variables that should be calculated
-            double firstValue;
-            double secondValue;
-            double radius;
-            int devident;
-            int devider;
-        //consol initialisation of variables and checking for proper enter 
-        //the first value for common calculations
-        link1:
-            Console.WriteLine("Please, enter the first value for common calculations");
-            string firstValueConsole = Console.ReadLine();
-            if (Double.TryParse(firstValueConsole, out firstValue))
+            //create variables that should be calculated and their default initialisation 
+            double firstValue = 1;
+            double secondValue = 1;
+            double radius = 1;
+            int devident = 1;
+            int devider = 1;
+
+            string firstValueConsole = "";
+            string secondValueConsole = "";
+            string radiusConsole = "";
+            string devidentConsole = "";
+            string deviderConsole = "";
+
+            //consol initialisation of variables and checking for proper enter 
+            //the first value for common calculations
+            do
             {
-                Console.WriteLine("The first value have been set \n");
+                if (string.IsNullOrEmpty(firstValueConsole))
+                {
+                    Console.WriteLine("Please, enter the first value for common calculations");
+                }
+                else
+                {
+                    Console.WriteLine("The value is not correct, try to enter another value");
+                }
+                firstValueConsole = Console.ReadLine();
             }
-            else
+            while (!Double.TryParse(firstValueConsole, out firstValue));
+
+            //the second value for common calculations
+            do
             {
-                Console.WriteLine("The value is not correct, try to enter another");
-                goto link1;
+                if (string.IsNullOrEmpty(secondValueConsole))
+                {
+                    Console.WriteLine("Please, enter the second value for common calculations");
+                }
+                else
+                {
+                    Console.WriteLine("The value is not correct, try to enter another value");
+                }
+                secondValueConsole = Console.ReadLine();
             }
-        //the second value for common calculations
-        link2:
-            Console.WriteLine("Please, enter the second value for common calculations");
-            string secondValueConsole = Console.ReadLine();
-            if (Double.TryParse(secondValueConsole, out secondValue))
+            while (!Double.TryParse(secondValueConsole, out secondValue));
+
+            //the circle radius value
+            do
             {
-                Console.WriteLine("The second value have been set \n");
+                if (string.IsNullOrEmpty(radiusConsole))
+                {
+                    Console.WriteLine("Please, enter the circle radius value");
+                }
+                else
+                {
+                    Console.WriteLine("The value is not correct, try to enter another value");
+                }
+                radiusConsole = Console.ReadLine();
             }
-            else
+            while (!Double.TryParse(radiusConsole, out radius));
+
+            //the devident values (for the reminder after devision calculation)
+            do
             {
-                Console.WriteLine("The value is not correct, try to enter another");
-                goto link2;
+                if (string.IsNullOrEmpty(devidentConsole))
+                {
+                    Console.WriteLine("Please, enter the devident value");
+                }
+                else
+                {
+                    Console.WriteLine("The value is not correct, try to enter another value");
+                }
+                devidentConsole = Console.ReadLine();
             }
-        //the circle radius value
-        link3:
-            Console.WriteLine("Please, enter the circle radius");
-            string radiusConsole = Console.ReadLine();
-            if (Double.TryParse(radiusConsole, out radius))
+            while (!Int32.TryParse(devidentConsole, out devident));
+
+            //the devider values (for the reminder after devision calculation)
+            do
             {
-                Console.WriteLine("The circle radius have been set \n");
+                if (string.IsNullOrEmpty(deviderConsole))
+                {
+                    Console.WriteLine("Please, enter the devider value");
+                }
+                else
+                {
+                    Console.WriteLine("The value is not correct, try to enter another value");
+                }
+                deviderConsole = Console.ReadLine();
             }
-            else
-            {
-                Console.WriteLine("The value is not correct, try to enter another");
-                goto link3;
-            }
-        //the devident and the devider values (for the reminder after devision calculation)
-        link4:
-            Console.WriteLine("Please, enter the value for devident");
-            string devidentConsole = Console.ReadLine();
-            if (Int32.TryParse(devidentConsole, out devident))
-            {
-                Console.WriteLine("The devident have been set \n");
-            }
-            else
-            {
-                Console.WriteLine("The value is not correct, try to enter another");
-                goto link4;
-            }
-        link5:
-            Console.WriteLine("Please, enter the value for devider");
-            string deviderConsole = Console.ReadLine();
-            if (Int32.TryParse(deviderConsole, out devider) && devider != 0)
-            {
-                Console.WriteLine("The devider have been set \n");
-            }
-            else
-            {
-                Console.WriteLine("The value is not correct, try to enter another");
-                goto link5;
-            }
+            while (!Int32.TryParse(deviderConsole, out devider) || devider == 0);
             Console.WriteLine($"The result of calculations {firstValue} and {secondValue}");
             Console.WriteLine("Add: " + Add(firstValue, secondValue));
             Console.WriteLine("Substrut: " + Subtruct(firstValue, secondValue));
