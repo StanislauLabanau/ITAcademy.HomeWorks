@@ -6,39 +6,6 @@ namespace HW03.Task2
     {
         static void Main(string[] args)
         {
-            static double Add(double firstValue, double secondValue)
-            {
-                return firstValue + secondValue;
-            }
-            static double Subtruct(double firstValue, double secondValue)
-            {
-                return firstValue - secondValue;
-            }
-            static double Multiply(double firstValue, double secondValue)
-            {
-                return firstValue * secondValue;
-            }
-            static double Devide(double firstValue, double secondValue)
-            {
-
-                if (secondValue == 0)
-                {
-                    Console.WriteLine("The second value is set to zero, it's impossible to devide by zero");
-                    return firstValue / secondValue;
-                }
-                else
-                {
-                    return firstValue / secondValue;
-                }
-            }
-            static int ReminderAfterDeviding(int devident, int devider)
-            {
-                return devident % devider;
-            }
-            static double CircleSquare(double Radius)
-            {
-                return 3.14 * Radius * Radius;
-            }
             //create variables that should be calculated and their default initialisation 
             double firstValue = 1;
             double secondValue = 1;
@@ -135,6 +102,39 @@ namespace HW03.Task2
             Console.WriteLine($"The squere of cicle with radius {radius} is {CircleSquare(radius)}");
             Console.WriteLine($"The reminder after devision of {devident} by {devider} is {ReminderAfterDeviding(devident, devider)}");
             Console.ReadKey();
+        }
+        static double Add(double firstValue, double secondValue)
+        {
+            return firstValue + secondValue;
+        }
+        static double Subtruct(double firstValue, double secondValue)
+        {
+            return firstValue - secondValue;
+        }
+        static double Multiply(double firstValue, double secondValue)
+        {
+            return firstValue * secondValue;
+        }
+        static double Devide(double firstValue, double secondValue)
+        {
+
+            if (secondValue == 0)
+            {
+                Console.WriteLine("The second value is set to zero, it's impossible to devide by zero");
+                return firstValue / secondValue;
+            }
+            else
+            {
+                return firstValue / secondValue;
+            }
+        }
+        static int ReminderAfterDeviding(int devident, int devider)
+        {
+            return devident % devider;
+        }
+        static double CircleSquare(double Radius)
+        {
+            return 3.14 * Radius * Radius;
         }
     }
 }
