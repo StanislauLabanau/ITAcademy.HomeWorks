@@ -46,7 +46,7 @@ namespace HW04.Task4
                 }
                 valueConsole = Console.ReadLine();
             }
-            while (!Char.TryParse(valueConsole, out value) && (value =='+' || value=='-'));
+            while (!(Char.TryParse(valueConsole, out value) && (value =='+' || value=='-')));
             return value;
         }
 

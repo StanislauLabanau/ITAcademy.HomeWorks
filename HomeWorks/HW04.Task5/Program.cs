@@ -6,22 +6,29 @@ namespace HW04.Task5
     {
         static void Main(string[] args)
         {
-            string alfabetStr = "ABCDEFG";
+            //array revers
+            string alphabetStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            char[] alphabet = alphabetStr.ToCharArray();
             char mediator;
 
-            char[] alfabet = alfabetStr.ToCharArray();
-
-            for (int i = 0; i < alfabet.Length; i++)
+            for (int i = 0; i < alphabet.Length / 2; i++)
             {
-                mediator = alfabet[i];
-                alfabet[i] = alfabet[alfabet.Length - 1 - i];
-                alfabet[alfabet.Length - 1 - i] = mediator;
+                mediator = alphabet[alphabet.Length - 1 - i];
+                alphabet[alphabet.Length - 1 - i] = alphabet[i];
+                alphabet[i] = mediator;
             }
 
-            for (int i = 0; i < alfabet.Length; i++)
+            foreach (char symbols in alphabet)
             {
-                Console.WriteLine(alfabet[i]);
+                Console.WriteLine(symbols);
             }
+
+            //task 5 
+            for (int i=90; i>64; i--)
+            {
+                Console.Write(" " + (char)i);
+            }
+            Console.ReadKey();
         }
     }
 }

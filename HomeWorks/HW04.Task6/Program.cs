@@ -6,7 +6,7 @@ namespace HW04.Task6
     {
         static char EnterMovementSymbol()
         {
-            char value = default(char);
+            char value;
             string valueConsole = default(string);
 
             do
@@ -20,8 +20,9 @@ namespace HW04.Task6
                     Console.WriteLine("The format isn't correct, try again");
                 }
                 valueConsole = Console.ReadLine();
+                //value = Char.Parse(valueConsole);
             }
-            while (!Char.TryParse(valueConsole, out value) && (value != 'W' || value != 'S' || value != 'A' || value != 'D'));
+            while (!(Char.TryParse(valueConsole, out value) && (value.Equals('W') || value.Equals('S') || value.Equals('A') || value.Equals('D'))));
             return value;
         }
         static void Main(string[] args)
@@ -46,6 +47,8 @@ namespace HW04.Task6
                     Console.WriteLine("something is wrong");
                     break;
             }
+
+            Console.ReadKey();
         }
     }
 }
