@@ -8,19 +8,19 @@ namespace StringLetterCounting
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the string ");
+            Console.WriteLine("Enter the string");
             string someString = Console.ReadLine();
+            StringBuilder resultString = GetSortedString(someString);
 
-            Console.WriteLine($"The result string is \n{GetSortedString(someString)}");
-
+            Console.WriteLine($"The result string is \n{resultString}");
             Console.ReadKey();
         }
         static StringBuilder GetSortedString(string someString)
         {
-            const char firstLetter = 'a';
-            const char lastLetter = 'z';
-            char min;
-            int counter;
+            const char FirstLetter = 'a';
+            const char LastLetter = 'z';
+            char minLetter = LastLetter;
+            int letterCounter = 0;
 
             someString = someString.ToLower();
 
@@ -29,7 +29,7 @@ namespace StringLetterCounting
 
             for (int i = 0; i < sb.Length; i++)
             {
-                if (sb[i] < firstLetter || sb[i] > lastLetter)
+                if (sb[i] < FirstLetter || sb[i] > LastLetter)
                 {
                     sb.Remove(i, 1);
                     i--;
@@ -38,19 +38,20 @@ namespace StringLetterCounting
 
             while (sb.Length != 0)
             {
-                counter = 0;
-                min = lastLetter;
                 for (int i = 0; i < sb.Length; i++)
                 {
-                    if (sb[i] <= min)
+                    if (sb[i] < minLetter)
                     {
-                        min = sb[i];
+                        minLetter = sb[i];
                     }
                 }
-                counter = 0;
-                counter = sb.Length - sb.Replace(min.ToString(), "").Length;
-                resultSb.Append(min);
-                resultSb.Append(counter);
+
+                letterCounter = sb.Length - sb.Replace(minLetter.ToString(), "").Length;
+                resultSb.Append(minLetter);
+                resultSb.Append(letterCounter);
+
+                letterCounter = 0;
+                minLetter = LastLetter;
             }
 
             return resultSb;

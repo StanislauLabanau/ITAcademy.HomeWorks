@@ -4,6 +4,7 @@ namespace AssamblyOne
 {
     class EnduroMotorcycle : Motorcycle
     {
+        //In this class only fields and methods with these access modifiers are accessible
         void SomeMetod()
         {
             _vinNumberProtected = "vin number enduro";
@@ -17,12 +18,12 @@ namespace AssamblyOne
 
             _vinNumberInternal = "vin number enduro";
             StartEngineInternal();
-
         }
     }
 
     class Program
     {
+        //In this class only fields and methods with these access modifiers are accessible
         static void Main(string[] args)
         {
             Motorcycle firstMotorcycle = new Motorcycle();
