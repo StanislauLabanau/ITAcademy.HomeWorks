@@ -47,7 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssamblyTwo", "AssamblyTwo\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringLetterCounting", "StringLetterCounting\StringLetterCounting.csproj", "{32F9C6E8-AF64-42BE-B859-DF772ED81B5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW12.Task1", "HW12.Task1\HW12.Task1.csproj", "{1E4E93F6-122C-4E7C-9269-A8850BBA90CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW12.Task1", "HW12.Task1\HW12.Task1.csproj", "{1E4E93F6-122C-4E7C-9269-A8850BBA90CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW12.Task2", "HW12.Task2\HW12.Task2.csproj", "{C9F19955-CBCF-4210-9869-BC8B8DB749DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW12.Task3", "HW12.Task3\HW12.Task3.csproj", "{C0DE532D-115B-4655-B7F1-1C6D76DEC594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +151,14 @@ Global
 		{1E4E93F6-122C-4E7C-9269-A8850BBA90CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E4E93F6-122C-4E7C-9269-A8850BBA90CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E4E93F6-122C-4E7C-9269-A8850BBA90CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F19955-CBCF-4210-9869-BC8B8DB749DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F19955-CBCF-4210-9869-BC8B8DB749DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F19955-CBCF-4210-9869-BC8B8DB749DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F19955-CBCF-4210-9869-BC8B8DB749DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0DE532D-115B-4655-B7F1-1C6D76DEC594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0DE532D-115B-4655-B7F1-1C6D76DEC594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0DE532D-115B-4655-B7F1-1C6D76DEC594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0DE532D-115B-4655-B7F1-1C6D76DEC594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

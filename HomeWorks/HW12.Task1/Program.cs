@@ -7,6 +7,7 @@ namespace HW12.Task1
     class Program
     {
         delegate void GoOnBoard(Passanger passanger);
+
         static void Main(string[] args)
         {
             MinskAirport minskAirport = new MinskAirport();

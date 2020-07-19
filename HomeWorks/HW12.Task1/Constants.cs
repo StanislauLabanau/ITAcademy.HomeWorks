@@ -17,7 +17,7 @@ namespace HW12.Task1
         public const string CheckinUnsuccess = "Unfortunately your personal data didn't match the reservation data. Please appeal to the reservation service";
         public const string SecuritySuccess = "Security passed. You may go to the passport control now";
         public const string SecurityUnsuccessFirst = "You have forbidden things. Are you going to leave it?";
-        public const string SecurityUnsuccessSecond = "You may not pass";
+        public const string SecurityUnsuccessSecond = "You failed to pass sequrity";
         public const string PassportControlSuccess = "Passport control is completed. Welcome onboard ";
         public const string PassportControlUnsuccess = "Today is not your day";
     }
