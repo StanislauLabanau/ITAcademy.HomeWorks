@@ -18,6 +18,7 @@ namespace HW12.Task3.Types
             ID = Guid.NewGuid();
             Odometr = default;
         }
+
         internal Motorcycle(string model, int year, int odometr)
         {
             Model = model;
@@ -25,6 +26,7 @@ namespace HW12.Task3.Types
             ID = Guid.NewGuid();
             Odometr = odometr;
         }
+
         internal Motorcycle(Guid id, string model, int year, int odometr)
         {
             Model = model;

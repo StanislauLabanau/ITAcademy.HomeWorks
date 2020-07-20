@@ -14,7 +14,6 @@ namespace HW12.Task1.Types
         public BaggageType BaggageType { get; set; }
         public bool ForbiddenThings { get; set; }
         
-
         public Passanger(Passport passport, Reservation reservation, BaggageType baggageType)
         {
             Passport = passport;

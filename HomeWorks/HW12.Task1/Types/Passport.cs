@@ -18,6 +18,7 @@ namespace HW12.Task1.Types
             SecondName = secondName;
             PassportNumber = passportNumber;
         }
+
         public Passport(string firstName, string secondName, string passportNumber, bool visa)
         {
             FirstName = firstName;
